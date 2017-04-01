@@ -1,0 +1,24 @@
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDISON        23        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDWARD        34        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDISON        23        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+        52        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDISON        4        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+GGUG        2        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+GGUG        2        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+TEST        90        2
