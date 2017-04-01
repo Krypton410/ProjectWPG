@@ -3,13 +3,13 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Maxwell
@@ -19,62 +19,42 @@ public class Challenge extends javax.swing.JFrame {
     /**
      * Creates new form Challenge
      */
-
-    
-    
-
-  
-       
-       
-        
     public Challenge() {
         initComponents();
-         setTitle("Challenges Sector");
+        setTitle("Challenges Sector");
         setResizable(false);
         setSize(726, 400);
         String name = usrdisplay.getText();
-            myMain doi = new myMain();
-    
-     
-                            
-       
+        myMain doi = new myMain();
+
     }
-       
-            
-    
-    
-        //calling uname from myMain to this
-        public void postData(String uname){
-        usrdisplay.setText(uname.toUpperCase());}
-        
-         public void postRep(int getRep) {
-             PushRec.setText(String.valueOf(getRep));
-         }
-         public void postTime(int getTime){
-             PushTime.setText(String.valueOf(getTime));
-         }
-                
-         
-         
-         //Back
-         
-         
-          public void postData1(String uname){
-        usrdisplay.setText(uname.toUpperCase());}
 
-          public void postRep1(String getRep) {
-             PushRec.setText((getRep));
-         }
-         public void postTime1(String getTime){
-             PushTime.setText(getTime);
-         }
-          
-         
-         
-         
-         
+    //calling uname from myMain to this
+    public void postData(String uname) {
+        usrdisplay.setText(uname.toUpperCase());
+    }
 
-          
+    public void postRep(int getRep) {
+        PushRec.setText(String.valueOf(getRep));
+    }
+
+    public void postTime(int getTime) {
+        PushTime.setText(String.valueOf(getTime));
+    }
+
+    //Back
+    public void postData1(String uname) {
+        usrdisplay.setText(uname.toUpperCase());
+    }
+
+    public void postRep1(String getRep) {
+        PushRec.setText((getRep));
+    }
+
+    public void postTime1(String getTime) {
+        PushTime.setText(getTime);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -244,70 +224,52 @@ public class Challenge extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-       new myMain().setVisible(true);
+        new myMain().setVisible(true);
         this.setVisible(false);
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new PushUpChallenge().setVisible(false);
-                                       Challenge challenge = new Challenge();
-                                    //   String uname = challenge.postData(String.valueOf());
-                                    PushUpChallenge begin = new PushUpChallenge();
-                                    Log log = new Log();
-               
-                
+        Challenge challenge = new Challenge();
+        //   String uname = challenge.postData(String.valueOf());
+        PushUpChallenge begin = new PushUpChallenge();
+        Log log = new Log();
+       
+        String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants :", JOptionPane.OK_CANCEL_OPTION);
         
+        String name = usrdisplay.getText();
+        DefaultTableModel DefaultTableModel = null;
+        begin.postData(name, participants, DefaultTableModel);
         
-                                       
-         String name = usrdisplay.getText();
-                                        
-                            
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       begin.postData(name);
-                                        
-                                     
-                                        begin.setVisible(true);
-                                        this.setVisible(false);
-                                        
-                                      //  begin.postData(usrdisplay);
-   
-                                         
-                                        
-        
-        
+        begin.setVisible(true);
+        this.setVisible(false);
+
+        //  begin.postData(usrdisplay);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        
-                  Ranking ranking = new Ranking();
-                 Challenge challenge = new Challenge();
+
+        Ranking ranking = new Ranking();
+        Challenge challenge = new Challenge();
         PushUpChallenge puc = new PushUpChallenge();
-                     myMain begin = new myMain();
-        
-              
+        myMain begin = new myMain();
+
         String getRepC = puc.repinput.getText();
         challenge.postRep1((getRepC));
         String getTimeC = challenge.PushTime.getText();
-        challenge.postTime1((getTimeC)) ;
-        String uname =  puc.area.getText();
+        challenge.postTime1((getTimeC));
+        String uname = puc.area.getText();
         String rep = PushRec.getText();
         String time = PushTime.getText();
         String name = usrdisplay.getText();
         ranking.postTime1(getRepC, getTimeC, uname);
-      
 
-          
-          challenge.postData1(uname);
-          
+        challenge.postData1(uname);
+
         /*
             String st[]=new String[4];
             st[0] = "1";
@@ -315,16 +277,12 @@ public class Challenge extends javax.swing.JFrame {
             st[2] = puc.repinput.getText().trim();
             st[3] = puc.w.getText().trim();
             
-        */  
-        
-        
-                                        
-                                        ranking.setVisible(true);
-                                        this.setVisible(false);
-                                        
-                             
-                                        //ranking.postData(name);
-        
+         */
+        ranking.setVisible(true);
+        this.setVisible(false);
+
+        //ranking.postData(name);
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 import java.awt.Label;
+import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.text.NumberFormat;
@@ -16,6 +17,7 @@ import java.util.logging.Logger;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.text.NumberFormatter;
 /**
  *
@@ -32,20 +34,29 @@ public class PushUpChallenge extends javax.swing.JFrame {
      */
 
        public String[] getanswer = new String[0];
-         int passed = 0;
-
+         int passed;
+         
              
     public PushUpChallenge()  {
         
         initComponents();
         myMain ti = new myMain();
+        Challenge challenge = new Challenge();
         setTitle("Challenge: Push Up");
+
         setResizable(false);
         setSize(726, 400);
-        
+       
         Timer timer = new Timer();
         show1.setVisible(false);
         repinput.setVisible(false);
+           DefaultTableModel modTable;
+       
+  
+
+        
+        
+
         
       /* timer
         TimerTask task = new TimerTask()
@@ -68,14 +79,99 @@ public class PushUpChallenge extends javax.swing.JFrame {
          
          }
     */
+      
+        
     }
   
-        public void postData(String name){
-        area.setText(name);
-        
-        
+    
+      
 
-    }
+    
+        public String postData(String name, String participants, DefaultTableModel DefaultTableModel){
+        area.setText(name);
+        DefaultTableModel modTable = null;
+        DefaultTableModel = modTable;
+        modTable = new DefaultTableModel();
+        table.setModel(modTable);
+        DefaultTableModel modTable1 = null;
+        DefaultTableModel = modTable1;
+        modTable.addColumn("Place");
+        modTable.addColumn("Reps");
+        modTable.addColumn("test");
+        modTable.addColumn("testw");
+
+        
+        
+    
+        
+        int length = Integer.valueOf(participants); 
+        JOptionPane.showMessageDialog(null, "Number of Participants Recorded");
+        String[] names = new String[length];
+        String[] reps = new String[length];
+        String connect = name + reps;
+        
+        
+        for(int counter = 0; counter < length; counter++){
+            
+            String pNames = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            names[counter] = pNames;
+              
+            String username = repinput.getText().trim();
+                reps[counter] = username;
+               
+            }
+           
+            
+                for(int counter = 0; counter < length; counter++){
+            
+            JOptionPane.showMessageDialog(null, names[counter]);
+            names[counter] = names[counter];
+            reps[counter] = reps[counter];
+            //modTable.addRow(connect);
+            JLabel labels[] = new JLabel[length];
+          
+            for (JLabel label : labels)
+            {
+                label = new JLabel();
+            
+                for(int i = 0; i < length; i++){
+                    labels[i] = new JLabel(names[counter]);
+                    String[] a =  new String[4];
+                            a1.setText(names[i]);
+                            a2.setText(names[i]);
+                            a3.setText(names[counter]);
+                            a4.setText(names[counter]);
+                    
+                    //return labels;
+                    
+                }
+                
+            }
+            
+          // modTable.addRow(names);
+           //Players.setText(Integer.toString(counter));
+         // modTable.addRow(reps);
+      
+            }
+                
+                                
+            for(int counter = 0; counter < length; counter++){
+               
+                String username = repinput.getText().trim();
+                reps[counter] = (username);
+              
+                
+                
+            }
+                
+            for(int counter = 0; counter < length; counter++){
+                String st[] = new String[length];
+                
+                
+            }
+          return name;      
+        }       
+        
     
     PushUpChallenge(String user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -96,6 +192,8 @@ public class PushUpChallenge extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
         time = new java.awt.Label();
         warn = new javax.swing.JLabel();
         show1 = new javax.swing.JLabel();
@@ -106,14 +204,32 @@ public class PushUpChallenge extends javax.swing.JFrame {
         w = new java.awt.Label();
         strt = new java.awt.Button();
         stp = new java.awt.Button();
-        enter = new java.awt.Button();
+        save = new java.awt.Button();
         area = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
         btn = new java.awt.Button();
+        a1 = new java.awt.Label();
+        a2 = new java.awt.Label();
+        a3 = new java.awt.Label();
+        a4 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        table.setBackground(new java.awt.Color(51, 51, 51));
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(table);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(670, 120, 40, 190);
 
         time.setAlignment(java.awt.Label.CENTER);
         time.setBackground(new java.awt.Color(51, 51, 51));
@@ -122,7 +238,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         time.setForeground(new java.awt.Color(240, 240, 240));
         time.setText("0");
         getContentPane().add(time);
-        time.setBounds(500, 30, 200, 160);
+        time.setBounds(490, 10, 220, 110);
 
         warn.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         warn.setForeground(new java.awt.Color(240, 240, 240));
@@ -154,7 +270,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         block.setForeground(new java.awt.Color(240, 240, 240));
         block.setText("0");
         getContentPane().add(block);
-        block.setBounds(500, 30, 200, 160);
+        block.setBounds(490, 10, 220, 110);
 
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("USER");
@@ -195,16 +311,16 @@ public class PushUpChallenge extends javax.swing.JFrame {
         getContentPane().add(stp);
         stp.setBounds(100, 330, 80, 24);
 
-        enter.setBackground(new java.awt.Color(51, 51, 51));
-        enter.setForeground(new java.awt.Color(240, 240, 240));
-        enter.setLabel("Enter");
-        enter.addActionListener(new java.awt.event.ActionListener() {
+        save.setBackground(new java.awt.Color(51, 51, 51));
+        save.setForeground(new java.awt.Color(240, 240, 240));
+        save.setLabel("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterActionPerformed(evt);
+                saveActionPerformed(evt);
             }
         });
-        getContentPane().add(enter);
-        enter.setBounds(100, 330, 80, 24);
+        getContentPane().add(save);
+        save.setBounds(100, 330, 80, 24);
 
         area.setAlignment(java.awt.Label.CENTER);
         area.setBackground(new java.awt.Color(48, 48, 48));
@@ -228,6 +344,22 @@ public class PushUpChallenge extends javax.swing.JFrame {
         });
         getContentPane().add(btn);
         btn.setBounds(620, 330, 43, 24);
+
+        a1.setText("label2");
+        getContentPane().add(a1);
+        a1.setBounds(350, 120, 38, 20);
+
+        a2.setText("label3");
+        getContentPane().add(a2);
+        a2.setBounds(350, 150, 38, 20);
+
+        a3.setText("label4");
+        getContentPane().add(a3);
+        a3.setBounds(350, 180, 38, 20);
+
+        a4.setText("label5");
+        getContentPane().add(a4);
+        a4.setBounds(350, 210, 38, 20);
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/Challengepu.jpg"))); // NOI18N
@@ -272,23 +404,24 @@ public class PushUpChallenge extends javax.swing.JFrame {
      
                 strt.setVisible(false);
                 stp.setVisible(true);
-                enter.setVisible(false);
+                save.setVisible(false);
                 btn.setVisible(false);
                     Timer timer = new Timer();
     
       
         TimerTask task = new TimerTask()
         {
-            
+            @Override 
             public void run()
           
             {      
                     passed++;
                     time.setText(String.valueOf(passed));
             }  
-        };
-      
-               
+        
+            
+  
+            };   
      timer.scheduleAtFixedRate(task, 0, 1000);//1000ms = 1 s
      
 
@@ -297,35 +430,38 @@ public class PushUpChallenge extends javax.swing.JFrame {
 
     private void stpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stpActionPerformed
         // TODO add your handling code here:
-      
+    
         w.setText(String.valueOf(passed));
         String rec = String.valueOf(w.getText());
       
         time.setText(String.valueOf(rec));
         
               
-                enter.setVisible(true);
+                save.setVisible(true);
                 stp.setVisible(false);
                 strt.setVisible(false);
                 
                
                 time.setVisible(false);
                 block.setVisible(true);
-                enter.setVisible(true);
+                save.setVisible(true);
         
                 repinput.setVisible(true);
                 show1.setVisible(true);
         
     }//GEN-LAST:event_stpActionPerformed
 
-    private void enterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterActionPerformed
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
-       
+                String username = repinput.getText().trim();
+                 int get = Integer.valueOf(username);
+               
         Challenge challenge = new Challenge();
-        int getRep = Integer.valueOf(repinput.getText());
-        challenge.postRep(getRep);
+//        int getRep = Integer.valueOf(repinput.getText());
+//        challenge.postRep(getRep);
         int getTime = Integer.valueOf(w.getText());
         String uname = area.getText();
+        
         
         
         
@@ -341,7 +477,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         String time = w.getText();
         String name = area.getText();
         ranking.postTime1(rep, time, name);
-      
+    
         
         
          
@@ -351,24 +487,29 @@ public class PushUpChallenge extends javax.swing.JFrame {
         JLabel[] labels = null;
         
         
+        
+        challenge.postData(uname);
+        challenge.postTime(getTime);          
+      
+                
+        puc.time.setVisible(false);
+               
+                save.setVisible(false);
+                stp.setVisible(false);
+                strt.setVisible(false);
+         
+        
+        
         try {
             log.postData3(name, replog, timelog, labels);
             
         } catch (IOException ex) {
-            Logger.getLogger(Challenge.class.getName()).log(Level.SEVERE, null, ex);
+         //   Logger.getLogger(Challenge.class.getName()).log(Level.SEVERE, null, ex);
         }
            
         
-        
-        challenge.postData(uname);
-        challenge.postTime(getTime);          
-        challenge.setVisible(true);
-                  this.setVisible(false);
-        
-        
-                enter.setVisible(true);
-                stp.setVisible(false);
-                strt.setVisible(false);
+
+                
                 
         
        
@@ -382,7 +523,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         
       
         
-    }//GEN-LAST:event_enterActionPerformed
+    }//GEN-LAST:event_saveActionPerformed
 
     private void repinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repinputActionPerformed
 // TODO add your handling code here:
@@ -472,19 +613,25 @@ public class PushUpChallenge extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label a1;
+    private java.awt.Label a2;
+    private java.awt.Label a3;
+    private java.awt.Label a4;
     java.awt.Label area;
     private java.awt.Label block;
     private java.awt.Button btn;
-    private java.awt.Button enter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private java.awt.Label label1;
     java.awt.TextField repinput;
+    private java.awt.Button save;
     private javax.swing.JLabel show1;
     private java.awt.Button stp;
     private java.awt.Button strt;
-    private java.awt.Label time;
+    private javax.swing.JTable table;
+    public java.awt.Label time;
     java.awt.Label w;
     private javax.swing.JLabel warn;
     // End of variables declaration//GEN-END:variables

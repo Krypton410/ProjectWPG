@@ -1,24 +1,87 @@
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-EDISON        23        3
+AWDA        23        3
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-EDWARD        34        3
+AWDA        23        17
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-EDISON        23        2
+EFEF        3        2
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-        52        2
+EF        3        4
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-EDISON        4        3
+EF        3        16
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-GGUG        2        2
+EF        3        25
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-GGUG        2        2
+ED        23        6
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
-TEST        90        2
+ED        2        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        2        18
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        23        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        23        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        23        14
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EA        2        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EA        2        10
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+WEF                3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+TRH        98        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+YHJ        5        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+SD        9        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ADWAW        23        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDIS        3        4
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+OI        23        4
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+FE        23        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+GW        23        4
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+WEG        12        5
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ADAW        5        4
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        12        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        2        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+ED        12        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+TH        8        2

@@ -375,7 +375,7 @@ public class Ranking extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -10, 810, 730);
+        jLabel2.setBounds(0, -20, 810, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

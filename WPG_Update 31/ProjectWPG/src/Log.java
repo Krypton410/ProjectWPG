@@ -96,7 +96,7 @@ public class Log {
           ranking.postName(str);
            challenge.postData(uname);
              */
-             JOptionPane.showMessageDialog(null, str);
+            // JOptionPane.showMessageDialog(null, str);
 
         str = str.trim();
         if((str.length()!=0) && (str.charAt(0)!='#')){
