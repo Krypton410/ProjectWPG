@@ -104,7 +104,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         modTable = new DefaultTableModel();
         
         
-        table.setModel(modTable);
+        
         modTable.addColumn("User"); //b?
         modTable.addColumn("Reps");
         
@@ -183,12 +183,13 @@ public class PushUpChallenge extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
         time = new java.awt.Label();
+        jLabel4 = new javax.swing.JLabel();
         warn = new javax.swing.JLabel();
         show1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         repinput = new java.awt.TextField();
+        jLabel6 = new javax.swing.JLabel();
         block = new java.awt.Label();
         jLabel3 = new javax.swing.JLabel();
         label1 = new java.awt.Label();
@@ -204,20 +205,6 @@ public class PushUpChallenge extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        table.setBackground(new java.awt.Color(51, 51, 51));
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(table);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(490, 120, 220, 190);
-
         time.setAlignment(java.awt.Label.CENTER);
         time.setBackground(new java.awt.Color(51, 51, 51));
         time.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -225,7 +212,13 @@ public class PushUpChallenge extends javax.swing.JFrame {
         time.setForeground(new java.awt.Color(240, 240, 240));
         time.setText("0");
         getContentPane().add(time);
-        time.setBounds(490, 10, 220, 110);
+        time.setBounds(470, 10, 240, 110);
+
+        jLabel4.setFont(new java.awt.Font("Tunga", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel4.setText("<html>\n<p>Set Your Push Ups Record</p>\n<p>And Try To Beat It.</p>\n</html>\n");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 190, 190, 50);
 
         warn.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         warn.setForeground(new java.awt.Color(240, 240, 240));
@@ -237,6 +230,10 @@ public class PushUpChallenge extends javax.swing.JFrame {
         show1.setText("Enter Repetitions Made :");
         getContentPane().add(show1);
         show1.setBounds(20, 150, 140, 20);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/pushups (1).gif"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(470, 120, 240, 120);
 
         repinput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,13 +248,19 @@ public class PushUpChallenge extends javax.swing.JFrame {
         getContentPane().add(repinput);
         repinput.setBounds(160, 150, 30, 20);
 
+        jLabel6.setFont(new java.awt.Font("Tunga", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel6.setText("Push Up Form");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(550, 250, 120, 14);
+
         block.setAlignment(java.awt.Label.CENTER);
         block.setBackground(new java.awt.Color(51, 51, 51));
         block.setFont(new java.awt.Font("Lucida Console", 0, 48)); // NOI18N
         block.setForeground(new java.awt.Color(240, 240, 240));
         block.setText("0");
         getContentPane().add(block);
-        block.setBounds(490, 10, 220, 110);
+        block.setBounds(470, 10, 240, 110);
 
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("USER");
@@ -433,8 +436,8 @@ public class PushUpChallenge extends javax.swing.JFrame {
         int getTime = Integer.valueOf(w.getText());
         String uname = area.getText();
         
-        
-        
+        challenge.setVisible(true);
+        this.setVisible(false);
         
                 
                   Ranking ranking = new Ranking();
@@ -590,14 +593,15 @@ public class PushUpChallenge extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private java.awt.Label label1;
     java.awt.TextField repinput;
     private java.awt.Button save;
     private javax.swing.JLabel show1;
     private java.awt.Button stp;
     private java.awt.Button strt;
-    private javax.swing.JTable table;
     public java.awt.Label time;
     java.awt.Label w;
     private javax.swing.JLabel warn;

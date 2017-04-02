@@ -22,7 +22,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
      * Creates new form PullUpsChallenge
      */
     int passed;
-  
+  String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants haha:", JOptionPane.OK_CANCEL_OPTION);
 
     public PullUpsChallenge() {
         initComponents();
@@ -42,10 +42,12 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         time.setVisible(false);
         jButton2.setVisible(false);
         table.setVisible(false);
-        
-        
-        
-        
+        info.setVisible(true);
+        fin.setVisible(false);
+        jScrollPane3.setVisible(false);
+        tableR.setVisible(false);
+        rank.setVisible(false);
+        jScrollPane2.setVisible(false);
         
         
 
@@ -64,7 +66,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         table.setEnabled(false);
         //b?
         modTable.addColumn("Reps");
-
+         
         int length = Integer.valueOf(participants);
         JOptionPane.showMessageDialog(null, "Number of Participants Recorded");
 
@@ -124,7 +126,16 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton4 = new javax.swing.JButton();
+        info = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        fin = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        rank = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableR = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
@@ -137,6 +148,39 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jButton4.setText("Back");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(590, 340, 55, 23);
+
+        info.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        info.setForeground(new java.awt.Color(240, 240, 240));
+        info.setText("Players will do a test of maximuim Pull Ups");
+        getContentPane().add(info);
+        info.setBounds(250, 230, 250, 15);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/pullup (1).gif"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(600, 60, 100, 230);
+
+        jLabel3.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel3.setText("Correct Form Pull Ups");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(590, 300, 140, 14);
+
+        fin.setText("FIINSH");
+        fin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fin);
+        fin.setBounds(180, 330, 100, 23);
+
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("GulimChe", 0, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(240, 240, 240));
@@ -147,13 +191,25 @@ public class PullUpsChallenge extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(280, 140, 110, 50);
+        jButton3.setBounds(310, 170, 110, 50);
+
+        rank.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane3.setViewportView(rank);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(450, 150, 50, 200);
+
+        tableR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane2.setViewportView(tableR);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(580, 150, 90, 200);
 
         table.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(table);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(450, 150, 220, 200);
+        jScrollPane1.setBounds(500, 150, 90, 200);
 
         jButton2.setText("Reset Time");
         jButton2.setToolTipText("");
@@ -302,17 +358,22 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         PullUpsChallenge pull = new PullUpsChallenge();
-        String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants :", JOptionPane.OK_CANCEL_OPTION);
          jButton3.setVisible(false);
+         jLabel3.setVisible(false);
+         jLabel5.setVisible(false);
         block.setVisible(true);
         jButton1.setVisible(true);
         time.setVisible(true);
         jButton2.setVisible(true);
         table.setVisible(true);
         jScrollPane1.setVisible(true);
-        
-        
-        
+        info.setVisible(false);
+        fin.setVisible(true);
+        rank.setVisible(true);
+        tableR.setVisible(true);
+        jScrollPane1.setVisible(true);
+        jScrollPane2.setVisible(true);
+        jScrollPane3.setVisible(true);
         DefaultTableModel modTable1 = null;
         DefaultTableModel modTable = null;
         DefaultTableModel DefaultTableModel = modTable1;
@@ -322,7 +383,6 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         table.setModel(modTable);
         table.setEnabled(false);
                     modTable.addColumn("User");
-            modTable.addColumn("time");
         int length = Integer.valueOf(participants);
         String[] names = new String[length];
   for (int counter = 0; counter < length; counter++) {
@@ -338,6 +398,57 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void finActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finActionPerformed
+        // TODO add your handling code here:
+        
+         DefaultTableModel modTable1 = null;
+        DefaultTableModel modTableR = null;
+        DefaultTableModel modRank = null;
+        DefaultTableModel DefaultTableModel = modTable1;
+        DefaultTableModel = modTableR;
+        DefaultTableModel = modRank;
+        DefaultTableModel = modTable1;
+        modRank = new DefaultTableModel();
+        modTableR = new DefaultTableModel();
+        tableR.setModel(modTableR);
+        rank.setModel(modRank);
+            modTableR.addColumn("Reps");
+            modRank.addColumn("Rank");
+        tableR.setEnabled(false);
+        rank.setEnabled(false);
+        int length = Integer.valueOf(participants);
+         String[] reps = new String[length];
+        String[] rank = new String[length];
+
+         
+         
+          for (int counter = 0; counter < length; counter++) {
+        String pReps = JOptionPane.showInputDialog(null, "Enter Repetititon Made:" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            reps[counter] = pReps;
+            
+          }
+          
+          
+          for (String r : reps){
+              modTableR.addRow(new Object[] {r});
+          }
+            for (int no = 0; no < length; no++){
+                
+                rank[no] = String.valueOf(length);
+            }
+            
+            for(String no1 : rank){
+                modRank.addRow(new Object[] {no1});
+            }
+    }//GEN-LAST:event_finActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Challenge challenge = new Challenge();
+        this.setVisible(false);
+        challenge.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -376,13 +487,22 @@ public class PullUpsChallenge extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label block;
+    private javax.swing.JButton fin;
+    private javax.swing.JLabel info;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable rank;
     private javax.swing.JTable table;
+    private javax.swing.JTable tableR;
     public java.awt.Label time;
     // End of variables declaration//GEN-END:variables
 }
