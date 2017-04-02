@@ -11,10 +11,14 @@
 import java.lang.String;
 import java.awt.Color;
 import java.io.IOException;
+import static java.nio.file.Files.list;
+import static java.rmi.Naming.list;
 import java.util.ArrayList;
+import static java.util.Collections.list;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.table.DefaultTableModel;
 public class Ranking extends javax.swing.JFrame {
     
@@ -95,6 +99,9 @@ public class Ranking extends javax.swing.JFrame {
     }
 
  
+    
+     //JList list = new JList(puc.names);
+    
         
     
     public class User{
@@ -193,6 +200,7 @@ public class Ranking extends javax.swing.JFrame {
     private void initComponents() {
 
         jSeparator1 = new javax.swing.JSeparator();
+        list1 = new java.awt.List();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -225,6 +233,14 @@ public class Ranking extends javax.swing.JFrame {
         getContentPane().setLayout(null);
         getContentPane().add(jSeparator1);
         jSeparator1.setBounds(30, 60, 740, 20);
+
+        list1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                list1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(list1);
+        list1.setBounds(370, 80, 240, 280);
 
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("Repetition");
@@ -410,6 +426,10 @@ public class Ranking extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2AncestorRemoved
 
+    private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_list1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -464,6 +484,7 @@ public class Ranking extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private java.awt.Label label1;
+    private java.awt.List list1;
     public javax.swing.JLabel userA;
     public javax.swing.JLabel userB;
     public javax.swing.JLabel userC;

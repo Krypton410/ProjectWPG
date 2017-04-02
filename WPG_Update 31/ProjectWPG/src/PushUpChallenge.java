@@ -12,11 +12,15 @@ import java.util.ArrayList;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.NumberFormatter;
 /**
@@ -24,6 +28,8 @@ import javax.swing.text.NumberFormatter;
  * @author Maxwell
  */
 public class PushUpChallenge extends javax.swing.JFrame {
+
+    
 /*
     static void postData(Label usrdisplay) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -89,17 +95,19 @@ public class PushUpChallenge extends javax.swing.JFrame {
     
         public String postData(String name, String participants, DefaultTableModel DefaultTableModel){
         area.setText(name);
+        
+        
         DefaultTableModel modTable = null;
         DefaultTableModel = modTable;
         modTable = new DefaultTableModel();
         table.setModel(modTable);
         DefaultTableModel modTable1 = null;
         DefaultTableModel = modTable1;
-        modTable.addColumn("Place");
-        modTable.addColumn("Reps");
-        modTable.addColumn("test");
-        modTable.addColumn("testw");
-
+        modTable.addColumn("Place"); //a?                
+        modTable.addColumn("User"); //b?
+        modTable.addColumn("Reps");//c
+        modTable.addColumn("Time");//d
+        modTable.addRow(new Object[]{"test1", "test2"});
         
         
     
@@ -108,49 +116,27 @@ public class PushUpChallenge extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Number of Participants Recorded");
         String[] names = new String[length];
         String[] reps = new String[length];
-        String connect = name + reps;
         
+
         
         for(int counter = 0; counter < length; counter++){
             
             String pNames = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
             names[counter] = pNames;
-              
+             
             String username = repinput.getText().trim();
-                reps[counter] = username;
-               
-            }
-           
-            
-                for(int counter = 0; counter < length; counter++){
-            
-            JOptionPane.showMessageDialog(null, names[counter]);
-            names[counter] = names[counter];
-            reps[counter] = reps[counter];
-            //modTable.addRow(connect);
-            JLabel labels[] = new JLabel[length];
+                reps[counter] = username;               
           
-            for (JLabel label : labels)
-            {
-                label = new JLabel();
+       //{
             
-                for(int i = 0; i < length; i++){
-                    labels[i] = new JLabel(names[counter]);
-                    String[] a =  new String[4];
-                            a1.setText(names[i]);
-                            a2.setText(names[i]);
-                            a3.setText(names[counter]);
-                            a4.setText(names[counter]);
-                    
-                    //return labels;
-                    
-                }
-                
-            }
+                //for(int counter = 0; counter < length; counter++){
+   
+                //}
             
-          // modTable.addRow(names);
+            
+           modTable.addRow(names);
            //Players.setText(Integer.toString(counter));
-         // modTable.addRow(reps);
+            modTable.addRow(reps);
       
             }
                 
@@ -173,6 +159,8 @@ public class PushUpChallenge extends javax.swing.JFrame {
         }       
         
     
+   
+        
     PushUpChallenge(String user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -208,10 +196,6 @@ public class PushUpChallenge extends javax.swing.JFrame {
         area = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
         btn = new java.awt.Button();
-        a1 = new java.awt.Label();
-        a2 = new java.awt.Label();
-        a3 = new java.awt.Label();
-        a4 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -229,7 +213,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(670, 120, 40, 190);
+        jScrollPane1.setBounds(490, 120, 220, 190);
 
         time.setAlignment(java.awt.Label.CENTER);
         time.setBackground(new java.awt.Color(51, 51, 51));
@@ -344,22 +328,6 @@ public class PushUpChallenge extends javax.swing.JFrame {
         });
         getContentPane().add(btn);
         btn.setBounds(620, 330, 43, 24);
-
-        a1.setText("label2");
-        getContentPane().add(a1);
-        a1.setBounds(350, 120, 38, 20);
-
-        a2.setText("label3");
-        getContentPane().add(a2);
-        a2.setBounds(350, 150, 38, 20);
-
-        a3.setText("label4");
-        getContentPane().add(a3);
-        a3.setBounds(350, 180, 38, 20);
-
-        a4.setText("label5");
-        getContentPane().add(a4);
-        a4.setBounds(350, 210, 38, 20);
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AppPackage/Challengepu.jpg"))); // NOI18N
@@ -613,10 +581,6 @@ public class PushUpChallenge extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Label a1;
-    private java.awt.Label a2;
-    private java.awt.Label a3;
-    private java.awt.Label a4;
     java.awt.Label area;
     private java.awt.Label block;
     private java.awt.Button btn;

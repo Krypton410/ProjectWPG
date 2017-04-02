@@ -85,3 +85,9 @@ ED        12        3
 #  USER  #   REP  #    TIME       
 #NAME   #REP   #TIME
 TH        8        2
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+JUE        20        3
+#  USER  #   REP  #    TIME       
+#NAME   #REP   #TIME
+EDI        12        3
