@@ -96,20 +96,21 @@ public class PushUpChallenge extends javax.swing.JFrame {
         public String postData(String name, String participants, DefaultTableModel DefaultTableModel){
         area.setText(name);
         
-        
-        DefaultTableModel modTable = null;
-        DefaultTableModel = modTable;
-        modTable = new DefaultTableModel();
-        table.setModel(modTable);
         DefaultTableModel modTable1 = null;
+        DefaultTableModel modTable = null;
         DefaultTableModel = modTable1;
-        modTable.addColumn("Place"); //a?                
+        DefaultTableModel = modTable;
+        DefaultTableModel = modTable1;
+        modTable = new DefaultTableModel();
+        
+        
+        table.setModel(modTable);
         modTable.addColumn("User"); //b?
-        modTable.addColumn("Reps");//c
-        modTable.addColumn("Time");//d
-        modTable.addRow(new Object[]{"test1", "test2"});
+        modTable.addColumn("Reps");
         
         
+        
+
     
         
         int length = Integer.valueOf(participants); 
@@ -122,21 +123,23 @@ public class PushUpChallenge extends javax.swing.JFrame {
         for(int counter = 0; counter < length; counter++){
             
             String pNames = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            String pReps = JOptionPane.showInputDialog(null, "Reps Made :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            reps[counter] = pReps;
             names[counter] = pNames;
-             
             String username = repinput.getText().trim();
                 reps[counter] = username;               
+                
+                
           
        //{
             
                 //for(int counter = 0; counter < length; counter++){
    
-                //}
+      
             
-            
-           modTable.addRow(names);
+          modTable.addRow(names);
            //Players.setText(Integer.toString(counter));
-            modTable.addRow(reps);
+          modTable.addRow(reps);
       
             }
                 

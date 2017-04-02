@@ -192,6 +192,11 @@ public class Challenge extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton3.setText("Pull Ups Challenge");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(190, 150, 160, 23);
 
@@ -237,11 +242,11 @@ public class Challenge extends javax.swing.JFrame {
         PushUpChallenge begin = new PushUpChallenge();
         Log log = new Log();
        
-        String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants :", JOptionPane.OK_CANCEL_OPTION);
+      
         
         String name = usrdisplay.getText();
         DefaultTableModel DefaultTableModel = null;
-        begin.postData(name, participants, DefaultTableModel);
+        //begin.postData(name, participants, DefaultTableModel);
         
         begin.setVisible(true);
         this.setVisible(false);
@@ -284,6 +289,21 @@ public class Challenge extends javax.swing.JFrame {
         //ranking.postData(name);
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+        PullUpsChallenge pull = new PullUpsChallenge();
+        pull.setVisible(false);
+       
+                
+        String name = usrdisplay.getText();
+        DefaultTableModel DefaultTableModel = null;
+        //pull.postData(name, participants, DefaultTableModel);
+        
+         pull.setVisible(true);;
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

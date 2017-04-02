@@ -240,7 +240,7 @@ public class Ranking extends javax.swing.JFrame {
             }
         });
         getContentPane().add(list1);
-        list1.setBounds(370, 80, 240, 280);
+        list1.setBounds(330, 120, 240, 280);
 
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("Repetition");
