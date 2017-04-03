@@ -7,16 +7,16 @@
      
 
     import java.util.Scanner;
+import javax.swing.table.DefaultTableModel;
 
 
     /** Class QuickSort **/
 
-    public class Sort
+    public class Sort extends PullUpsChallenge
 
     {
-
+        PullUpsChallenge c = new PullUpsChallenge();
         /** Quick Sort function **/
-
         public static void sort(int[] arr)
 
         {
@@ -99,16 +99,20 @@
 
             Scanner scan = new Scanner( System.in );        
 
-            System.out.println("Quick Sort Test\n");
+          
 
-            int n, i;
-
+            int n = 0, i;
+            String pNames = null;
+            int pReps = 0;
+            DefaultTableModel modTable = null;
+            String names = null;
+            int participants = 0;
             /** Accept number of elements **/
+            
 
             System.out.println("Enter number of integer elements");
-
-            n = scan.nextInt();
-
+           // ask(pNames,  pReps, modTable,  names,participants, n);
+            
             /** Create array of n elements **/
 
             int arr[] = new int[ n ];
