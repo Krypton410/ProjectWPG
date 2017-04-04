@@ -187,6 +187,11 @@ public class Challenge extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jButton2.setText("Planks");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(190, 190, 160, 23);
 
@@ -256,8 +261,9 @@ public class Challenge extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        JOptionPane.showMessageDialog(null, "This part is still being constructed");
         // TODO add your handling code here:
-
+/*
         Ranking ranking = new Ranking();
         Challenge challenge = new Challenge();
         PushUpChallenge puc = new PushUpChallenge();
@@ -274,7 +280,7 @@ public class Challenge extends javax.swing.JFrame {
         ranking.postTime1(getRepC, getTimeC, uname);
 
         challenge.postData1(uname);
-
+*/
         /*
             String st[]=new String[4];
             st[0] = "1";
@@ -283,8 +289,8 @@ public class Challenge extends javax.swing.JFrame {
             st[3] = puc.w.getText().trim();
             
          */
-        ranking.setVisible(true);
-        this.setVisible(false);
+//        ranking.setVisible(true);
+ //       this.setVisible(false);
 
         //ranking.postData(name);
 
@@ -304,6 +310,11 @@ public class Challenge extends javax.swing.JFrame {
          pull.setVisible(true);;
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "This Challenge is still under development");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

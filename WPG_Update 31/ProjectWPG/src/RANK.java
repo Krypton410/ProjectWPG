@@ -1,5 +1,4 @@
 
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
@@ -15,6 +14,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +28,6 @@ import javax.swing.table.DefaultTableModel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Maxwell
@@ -37,14 +37,33 @@ public class RANK extends javax.swing.JFrame {
     /**
      * Creates new form RANK
      */
-    public RANK() {
+    public RANK() throws IOException {
         initComponents();
-        
-      setTitle("Rank");
+/*
+        File f;
+        f = new File("RankingLog.txt");
+        if (!f.exists()) {
+            f.createNewFile();
+            JOptionPane.showMessageDialog(null, "Ranking Log.txt Made");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Ranking Log Exists");
+        }
+
+        Writer op;
+        op = new BufferedWriter(new FileWriter(f, true));
+        StringBuilder sb = new StringBuilder();
+        op.append("#User # REP");
+        op.append("\n");
+
+        op.append("\n");
+        Files.write(Paths.get("log.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
+        op.close();
+        */
+        setTitle("Rank");
         setResizable(false);
         setSize(726, 400);
-        
-        
+
         DefaultTableModel modTable = null;
         DefaultTableModel DefaultTableModel = modTable;
         modTable = new DefaultTableModel();
@@ -54,122 +73,101 @@ public class RANK extends javax.swing.JFrame {
         modTable.addColumn("Place");
         modTable.addColumn("Reps");
         modTable.addColumn("test");
-modTable.addColumn("testw");
-        
-        
-        
-        
-        
-        
-           Scanner scan = new Scanner( System.in );        
+        modTable.addColumn("testw");
 
-          
+        Scanner scan = new Scanner(System.in);
 
-            int n = 0, i;
-            String pNames = null;
-            int pReps = 0;
-          
-            String names = null;
-           String players = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
-           System.out.println("Enter number of Paricipants");
+        int n = 0, i;
+        String pNames = null;
+        int pReps = 0;
 
-            int length = Integer.valueOf(players);
-            /** Accept number of elements input **/
-     String[] namess = new String[length];
-     int[] reps = new int[length];
-     String Preps = null;
+        String names = null;
+        String players = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
+        System.out.println("Enter number of Paricipants");
+
+        int length = Integer.valueOf(players);
+        /**
+         * Accept number of elements input *
+         */
+        String[] namess = new String[length];
+        int[] reps = new int[length];
+        String Preps = null;
         for (int counter = 0; counter < length; counter++) {
 
-        String pNamess = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
-        
-          
-           namess[counter] =  pNamess;
-           
+            String pNamess = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+
+            namess[counter] = pNamess;
+
         }
         int index;
-        for(String user: namess){
+       /* for (String user : namess) {
 
-           System.out.println(user); 
-            }
+            System.out.println(user);
+            JOptionPane.showMessageDialog(null, user);
             
+        }
+test*/
+        n = length;
 
-        
+        /**
+         * Create array of value given elements *
+         */
+        int arr[] = new int[n];
 
-            n = length;
-            
-      
-            /** Create array of value given elements **/
+        /**
+         * Accept elements *
+         */
+        System.out.println("\nEnter " + n + " integer elements");
 
-            int arr[] = new int[ n ];
-
-            /** Accept elements **/
-
-            System.out.println("\nEnter "+ n +" integer elements");
-
-           //for (int counter = 0; counter < length; counter++) {
+        //for (int counter = 0; counter < length; counter++) {
         String pNamess = null;
 
-           
-
- 
         //}
-  
-            for (i = 0; i < n; i++){
-             Preps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNamess + "[" +(i + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
-        int ast = Integer.valueOf(Preps);
-            arr[i]= ast;
-             //arr[i] = scan.nextInt();
-
-            /** Call method sort **/
-            }
-           for(int a : arr){
-               
-               sort(arr);
-           }
+        for (i = 0; i < n; i++) {
+                   for (String user : namess) {
+                
+            System.out.println(user);
+            //JOptionPane.showMessageDialog(null, user);
+                    String pe = user;
+                   
+                   }
             
+            Preps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNamess+ "[" + (i + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
+                
+                   
+            int ast = Integer.valueOf(Preps);
+            arr[i] = ast;
+            //arr[i] = scan.nextInt();
+
+            /**
+             * Call method sort *
+             */
+                 
+                   }
+        for (int a : arr) {
+
+            sort(arr);
+        }
+
+        /**
+         * Print sorted Array *
+         */
+        System.out.println("\nElements after sorting ");
+
+        for (i = 0; i < n; i++) {
             
-
-            /** Print sorted Array **/
-
-            System.out.println("\nElements after sorting ");        
-
-            for (i = 0; i < n; i++)
-                JOptionPane.showMessageDialog(null, arr[i]);
+            JOptionPane.showMessageDialog(null, arr[i]);
+        }
         int ast = Integer.valueOf(Preps);
-                System.out.println(arr[i]);
-                         
-
-            System.out.println();            
-
+        System.out.println(arr[i]);
         
 
+        System.out.println();
+
         
-        
-        
-        
-        
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -201,157 +199,120 @@ modTable.addColumn("testw");
     /**
      * @param args the command line arguments
      */
-            
-    
-    
-    
-  public static void getAsk() {
+    public static void getAsk() {
 
         PullUpsChallenge pull = new PullUpsChallenge();
-        Sort sort =new Sort();
-    String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
-
-
-
-
+        Sort sort = new Sort();
+        String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
 
         //participants = pull.init(participants);
         //pull.init.getText(participants);
         int length = Integer.valueOf(participants);
         int n = length;
-       
-         String[] names = new String[length];
-         int[] reps = new int[length];
+
+        String[] names = new String[length];
+        int[] reps = new int[length];
         for (int counter = 0; counter < length; counter++) {
 
             String pNames = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
-          
-           names[counter] =  pNames;
+
+            names[counter] = pNames;
             
- 
         }
 
-                for (int counter = 0; counter < length; counter++) {
-            String pNames = null;
-
-           
-          String pReps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNames + "[" +(counter + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
-        
-            reps[counter]= (Integer.valueOf(pReps));
+        for (int counter = 0; counter < length; counter++) {
+            Iterable<String> pNames = null;
  
+
+            String pReps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNames + "[" + (counter + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
+
+            reps[counter] = (Integer.valueOf(pReps));
+            
+        
         }
-        
-        
+
         for (String str : names) {
 
-            System.out.println(str);
+            System.out.println(str);}
 
-        }
-        for(int r: reps){
+        
+        for (int r : reps) {
 
             System.out.println(r);
-            
+
         }
     }
-    
-    
-    
-    
-    
-    
-    
-            public static void sort(int[] arr)
 
-        {
+    public static void sort(int[] arr) {
 
-            quickSort(arr, 0, arr.length - 1);
+        quickSort(arr, 0, arr.length - 1);
 
-        }
-    
-            public static void quickSort(int arr[], int low, int high) 
+    }
 
-        {
+    public static void quickSort(int arr[], int low, int high) {
 
-            int i = low, j = high;
+        int i = low, j = high;
 
-            int temp;
+        int temp;
 
-            int pivot = arr[(low + high) / 2];
+        int pivot = arr[(low + high) / 2];
 
-     
+        
+         //* partition *
+         
+        while (i <= j) {
 
-            /** partition **/
+            while (arr[i] < pivot) {
+                i++;
+            }
 
-            while (i <= j) 
+            while (arr[j] > pivot) {
+                j--;
+            }
 
-            {
+            if (i <= j) {
 
-                while (arr[i] < pivot)
+              
+                 //* swap *
+               
+                temp = arr[i];
 
-                    i++;
+                arr[i] = arr[j];
 
-                while (arr[j] > pivot)
+                arr[j] = temp;
 
-                    j--;
+                i++;
 
-                if (i <= j) 
-
-                {
-
-                    /** swap **/
-
-                    temp = arr[i];
-
-                    arr[i] = arr[j];
-
-                    arr[j] = temp;
-
-     
-
-                    i++;
-
-                    j--;
-
-                }
+                j--;
 
             }
 
-     
-
-            /** recursively sort lower half **/
-
-            if (low < j)
-
-                quickSort(arr, low, j);
-
-            /** recursively sort upper half **/
-
-            if (i < high)
-
-                quickSort(arr, i, high);
-
         }
+
+        /**
+         * recursively sort lower half *
+         */
+        if (low < j) {
+            quickSort(arr, low, j);
+        }
+
+        /**
+         * recursively sort upper half *
+         */
+        if (i < high) {
+            quickSort(arr, i, high);
+        }
+
+    }
+
     public static void main(String args[]) {
-        
-        
-        
-        
-        
-        
-   
 
-        
-        
-        
-
-        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-
-try {
+        try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -372,7 +333,11 @@ try {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RANK().setVisible(true);
+                try {
+                    new RANK().setVisible(true);
+                } catch (IOException ex) {
+                    Logger.getLogger(RANK.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

@@ -78,12 +78,22 @@ public class Log {
         
       
         op.append("\n");
-        op.append((name) + "        " + (replog) + "        " + (timelog));
+        
 
         op.append("\n");
         Files.write(Paths.get("log.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
         op.close();
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         FileInputStream ifs = new FileInputStream(f);
         DataInputStream in = new DataInputStream(ifs);
         BufferedReader br = new BufferedReader(new InputStreamReader(in));

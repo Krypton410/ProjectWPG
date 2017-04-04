@@ -1,4 +1,5 @@
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -45,6 +46,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         fin.setVisible(false);
         jButton5.setVisible(false);
         jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
     }
 //not called yet
 
@@ -264,6 +266,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         info = new javax.swing.JLabel();
@@ -282,6 +285,11 @@ public class PullUpsChallenge extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jLabel4.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel4.setText("<html>\n<p>Pull-ups is the second-most important calisthenics exercise after push-ups.</p>\n\n<p>Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.</p><p> And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.</p>\n\n\n</html>");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(170, 110, 270, 190);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jButton5.setText("<html> <p>Start</p> <p>Competition</p> </html> ");
@@ -529,72 +537,76 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void finActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finActionPerformed
-        RANK rank = new RANK();   
-        Challenge challenge = new Challenge();
-           rank.setVisible(true);
-           this.setVisible(false);
-        /*
-           PullUpsChallenge pull = new PullUpsChallenge();
-        String ureps = null;
-        String pNames = null;
-        String[] dual = null;
-         
-       int n = 0;
-
-        //modTable = modTable.addRow("adasdasd");
-        DefaultTableModel modTable = null;
-        //int length = Integer.valueOf(null);
-        String pReps = null;
-       String participants = null;
-     
-        pull.ask(pNames, pReps, modTable, dual,  participants, n);
-        */
-        //init();
-      //  pull.ask(ureps , pNames, dual);
-
-
-        // TODO add your handling code here:
-        /*
-         DefaultTableModel modTable1 = null;
-        DefaultTableModel modTableR = null;
-        DefaultTableModel modRank = null;
-        DefaultTableModel DefaultTableModel = modTable1;
-        DefaultTableModel = modTableR;
-        DefaultTableModel = modRank;
-        DefaultTableModel = modTable1;
-        modRank = new DefaultTableModel();
-        modTableR = new DefaultTableModel();
-        tableR.setModel(modTableR);
-        rank.setModel(modRank);
-        
+        try {
+            RANK rank = new RANK();
+            Challenge challenge = new Challenge();
+            rank.setVisible(true);
+            this.setVisible(false);
+            /*
+            PullUpsChallenge pull = new PullUpsChallenge();
+            String ureps = null;
+            String pNames = null;
+            String[] dual = null;
+            
+            int n = 0;
+            
+            //modTable = modTable.addRow("adasdasd");
+            DefaultTableModel modTable = null;
+            //int length = Integer.valueOf(null);
+            String pReps = null;
+            String participants = null;
+            
+            pull.ask(pNames, pReps, modTable, dual,  participants, n);
+            */
+            //init();
+            //  pull.ask(ureps , pNames, dual);
+            
+            
+            // TODO add your handling code here:
+            /*
+            DefaultTableModel modTable1 = null;
+            DefaultTableModel modTableR = null;
+            DefaultTableModel modRank = null;
+            DefaultTableModel DefaultTableModel = modTable1;
+            DefaultTableModel = modTableR;
+            DefaultTableModel = modRank;
+            DefaultTableModel = modTable1;
+            modRank = new DefaultTableModel();
+            modTableR = new DefaultTableModel();
+            tableR.setModel(modTableR);
+            rank.setModel(modRank);
+            
             modTableR.addColumn("Reps");
             modRank.addColumn("Rank");
-        tableR.setEnabled(false);
-        rank.setEnabled(false);
-        int length = Integer.valueOf(participants);
-         String[] reps = new String[length];
-        String[] rank = new String[length];
-
-         
-         
-          for (int counter = 0; counter < length; counter++) {
-        String pReps = JOptionPane.showInputDialog(null, "Enter Repetititon Made:" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            tableR.setEnabled(false);
+            rank.setEnabled(false);
+            int length = Integer.valueOf(participants);
+            String[] reps = new String[length];
+            String[] rank = new String[length];
+            
+            
+            
+            for (int counter = 0; counter < length; counter++) {
+            String pReps = JOptionPane.showInputDialog(null, "Enter Repetititon Made:" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
             reps[counter] = pReps;
             
-          }
- 
-          for (String r : reps){
-              modTableR.addRow(new Object[] {r});
-          }
+            }
+            
+            for (String r : reps){
+            modTableR.addRow(new Object[] {r});
+            }
             for (int no = 0; no < length; no++){
-                
-                rank[no] = String.valueOf(length);
+            
+            rank[no] = String.valueOf(length);
             }
             
             for(String no1 : rank){
-                modRank.addRow(new Object[] {no1});
+            modRank.addRow(new Object[] {no1});
             }
-        */
+            */
+        } catch (IOException ex) {
+            Logger.getLogger(PullUpsChallenge.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_finActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -609,6 +621,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
        fin.setVisible(true);
        JOptionPane.showMessageDialog(null, "Competition has commenced! \n    Click finish for evaluation");
         jButton5.setVisible(false);
+        jLabel4.setVisible(true);
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -659,6 +672,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable table;
