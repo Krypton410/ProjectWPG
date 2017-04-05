@@ -103,9 +103,9 @@ public class Output extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel6.setText("Protein Intake per Day");
+        jLabel6.setText("Protein Intake/Day Calculator");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(540, 50, 190, 40);
+        jLabel6.setBounds(500, 50, 190, 40);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));

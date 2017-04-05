@@ -39,7 +39,7 @@ public class RANK extends javax.swing.JFrame {
      */
     public RANK() throws IOException {
         initComponents();
-/*
+        /*
         File f;
         f = new File("RankingLog.txt");
         if (!f.exists()) {
@@ -59,7 +59,7 @@ public class RANK extends javax.swing.JFrame {
         op.append("\n");
         Files.write(Paths.get("log.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
         op.close();
-        */
+         */
         setTitle("Rank");
         setResizable(false);
         setSize(726, 400);
@@ -70,11 +70,9 @@ public class RANK extends javax.swing.JFrame {
         table.setModel(modTable);
         DefaultTableModel modTable1 = null;
         DefaultTableModel = modTable1;
-        modTable.addColumn("Place");
+        modTable.addColumn("User");
         modTable.addColumn("Reps");
-        modTable.addColumn("test");
-        modTable.addColumn("testw");
-
+        table.setEnabled(false);
         Scanner scan = new Scanner(System.in);
 
         int n = 0, i;
@@ -92,79 +90,87 @@ public class RANK extends javax.swing.JFrame {
         String[] namess = new String[length];
         int[] reps = new int[length];
         String Preps = null;
+        String complete = null;
+        String pNamess = null;
+        String add = null;
+        String pe = null;
+        String concat = null;
+        int ast = 0;
+        int index = 0;
         for (int counter = 0; counter < length; counter++) {
 
-            String pNamess = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
+            pNamess = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
 
             namess[counter] = pNamess;
+            
 
         }
-        int index;
-       /* for (String user : namess) {
+        
+        
+        
+        /* for (String user : namess) {
 
             System.out.println(user);
-            JOptionPane.showMessageDialog(null, user);
-            
+            JOptionPane.showMessageDialog(null, user);   
         }
 test*/
         n = length;
-
         /**
          * Create array of value given elements *
          */
         int arr[] = new int[n];
-
         /**
          * Accept elements *
          */
         System.out.println("\nEnter " + n + " integer elements");
-
         //for (int counter = 0; counter < length; counter++) {
-        String pNamess = null;
-
+       
         //}
         for (i = 0; i < n; i++) {
-                   for (String user : namess) {
-                
-            System.out.println(user);
-            //JOptionPane.showMessageDialog(null, user);
-                    String pe = user;
-                   
-                   }
-            
-            Preps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNamess+ "[" + (i + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
-                
-                   
-            int ast = Integer.valueOf(Preps);
-            arr[i] = ast;
-            //arr[i] = scan.nextInt();
+            for (String user : namess) {
+                System.out.println(user);
+                //JOptionPane.showMessageDialog(null, user);
+                pe = user;
 
-            /**
-             * Call method sort *
-             */
-                 
-                   }
-        for (int a : arr) {
+            }
+          
 
-            sort(arr);
+            Preps = JOptionPane.showInputDialog(null, "Reps Made for :" + namess[i] + "[" + (i + 1) + "]", JOptionPane.OK_CANCEL_OPTION);                  
+                                   for(int z = 0; z < reps.length; z++){
+                                       if(arr[i] == reps[z]){
+                                       index = z;
+                                       }
+                    ast = Integer.valueOf(Preps); 
+              add = namess[i] + ast;
+              complete = namess[i];
+          // complete = Preps + ast;
+          
+           concat = String.valueOf(ast);
+            arr[i] = Integer.valueOf(concat);
+        
+            }
+            modTable.addRow(new Object[] {complete, ast});
+            //arr[i] = ast;
+            //complete =  namess[index] + " " + arr[i];
+             //Call method sort *   
         }
-
-        /**
-         * Print sorted Array *
-         */
-        System.out.println("\nElements after sorting ");
+        for (int a : arr) {   
+            sort(arr);
+        }    
+         //  Display
+        System.out.println("Sorted ");
 
         for (i = 0; i < n; i++) {
-            
-            JOptionPane.showMessageDialog(null, arr[i]);
+          // complete =   complete + String.valueOf(arr[i]) ;
+JOptionPane.showMessageDialog(null, arr[i]);
+
+           //JOptionPane.showMessageDialog(null, arr[i]);
         }
-        int ast = Integer.valueOf(Preps);
-        System.out.println(arr[i]);
-        
+        //ast = Integer.valueOf(Preps);
+        JOptionPane.showMessageDialog(null, "Ranking Finished");
+       // System.out.println(arr[i]);
 
-        System.out.println();
-
-        
+        System.out.println(namess[index]);
 
     }
 
@@ -177,6 +183,9 @@ test*/
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
@@ -184,10 +193,34 @@ test*/
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(240, 240, 240));
+        jButton2.setText("Save to Text");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(60, 340, 90, 21);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel2.setText("Participants");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(60, 20, 230, 30);
+
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setForeground(new java.awt.Color(240, 240, 240));
+        jButton1.setText("Back");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(600, 340, 55, 23);
+
         jScrollPane1.setViewportView(table);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(160, 30, 380, 340);
+        jScrollPane1.setBounds(180, 60, 380, 270);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -195,6 +228,22 @@ test*/
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,92 +266,62 @@ test*/
             String pNames = JOptionPane.showInputDialog(null, "Enter Participants :" + (counter + 1), JOptionPane.OK_CANCEL_OPTION);
 
             names[counter] = pNames;
-            
+
         }
 
         for (int counter = 0; counter < length; counter++) {
             Iterable<String> pNames = null;
- 
 
             String pReps = JOptionPane.showInputDialog(null, "Reps Made for :" + pNames + "[" + (counter + 1) + "]", JOptionPane.OK_CANCEL_OPTION);
 
             reps[counter] = (Integer.valueOf(pReps));
-            
-        
+
         }
 
         for (String str : names) {
 
-            System.out.println(str);}
+            System.out.println(str);
+        }
 
-        
         for (int r : reps) {
-
             System.out.println(r);
-
         }
     }
-
     public static void sort(int[] arr) {
-
         quickSort(arr, 0, arr.length - 1);
-
     }
 
     public static void quickSort(int arr[], int low, int high) {
-
-        int i = low, j = high;
-
+        //Descending Order 
+        int i =  low, j = high;
         int temp;
-
         int pivot = arr[(low + high) / 2];
-
-        
-         //* partition *
-         
+        //partition 
         while (i <= j) {
-
-            while (arr[i] < pivot) {
+            //Decend
+            while (arr[i] > pivot) {
                 i++;
             }
-
-            while (arr[j] > pivot) {
+            while (arr[j] < pivot) {
                 j--;
             }
-
             if (i <= j) {
-
-              
-                 //* swap *
-               
+             //Swaps
                 temp = arr[i];
-
                 arr[i] = arr[j];
-
                 arr[j] = temp;
-
                 i++;
-
                 j--;
-
             }
-
         }
-
-        /**
-         * recursively sort lower half *
-         */
+         //Sorting lower half 
         if (low < j) {
             quickSort(arr, low, j);
         }
-
-        /**
-         * recursively sort upper half *
-         */
+         // Sorting upper half 
         if (i < high) {
-            quickSort(arr, i, high);
+            quickSort(arr, high, i);
         }
-
     }
 
     public static void main(String args[]) {
@@ -343,7 +362,10 @@ test*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
