@@ -25,6 +25,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     int passed;
     // String participants = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
 
+
     public PullUpsChallenge() {
         initComponents();
         myMain ti = new myMain();
@@ -47,6 +48,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         jButton5.setVisible(false);
         jLabel3.setVisible(false);
         jLabel4.setVisible(false);
+        info1.setVisible(false);
     }
 //not called yet
 
@@ -268,6 +270,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        info1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         info = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -287,11 +290,11 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
-        jLabel4.setText("<html>\n<p>Pull-ups is the second-most important calisthenics exercise after push-ups.</p>\n\n<p>Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.</p><p> And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.</p>\n\n\n</html>");
+        jLabel4.setText("<html> <p>Pull-ups is the second-most important calisthenics exercise after push-ups.</p>  <p>Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.</p><p> And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.</p>   </html>");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(170, 110, 270, 190);
+        jLabel4.setBounds(20, 20, 400, 270);
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Source Code Pro", 0, 10)); // NOI18N
         jButton5.setText("<html> <p>Start</p> <p>Competition</p> </html> ");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -299,7 +302,13 @@ public class PullUpsChallenge extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(60, 239, 100, 50);
+        jButton5.setBounds(60, 259, 100, 30);
+
+        info1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        info1.setForeground(new java.awt.Color(240, 240, 240));
+        info1.setText("Click Finish to proceed.");
+        getContentPane().add(info1);
+        info1.setBounds(60, 305, 250, 20);
 
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -619,10 +628,11 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
        fin.setVisible(true);
+       
        JOptionPane.showMessageDialog(null, "Competition has commenced! \n    Click finish for evaluation");
         jButton5.setVisible(false);
         jLabel4.setVisible(true);
-
+        info1.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -664,6 +674,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
     private java.awt.Label block;
     private javax.swing.JButton fin;
     private javax.swing.JLabel info;
+    private javax.swing.JLabel info1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

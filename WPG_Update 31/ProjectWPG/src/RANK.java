@@ -1,12 +1,15 @@
 
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
+import java.util.List;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.Writer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -19,9 +22,15 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultRowSorter;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.RowSorter;
+import javax.swing.RowSorter.SortKey;
+import javax.swing.SortOrder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -33,33 +42,17 @@ import javax.swing.table.DefaultTableModel;
  * @author Maxwell
  */
 public class RANK extends javax.swing.JFrame {
+//FOR TEXT
+    private static CharSequence ast;
+    private static String complete;
+   
 
     /**
      * Creates new form RANK
      */
     public RANK() throws IOException {
         initComponents();
-        /*
-        File f;
-        f = new File("RankingLog.txt");
-        if (!f.exists()) {
-            f.createNewFile();
-            JOptionPane.showMessageDialog(null, "Ranking Log.txt Made");
 
-        } else {
-            JOptionPane.showMessageDialog(null, "Ranking Log Exists");
-        }
-
-        Writer op;
-        op = new BufferedWriter(new FileWriter(f, true));
-        StringBuilder sb = new StringBuilder();
-        op.append("#User # REP");
-        op.append("\n");
-
-        op.append("\n");
-        Files.write(Paths.get("log.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
-        op.close();
-         */
         setTitle("Rank");
         setResizable(false);
         setSize(726, 400);
@@ -73,16 +66,16 @@ public class RANK extends javax.swing.JFrame {
         modTable.addColumn("User");
         modTable.addColumn("Reps");
         table.setEnabled(false);
-        Scanner scan = new Scanner(System.in);
+       
 
         int n = 0, i;
-        String pNames = null;
-        int pReps = 0;
+
 
         String names = null;
         String players = JOptionPane.showInputDialog(null, "Enter Number Of Participants:", JOptionPane.OK_CANCEL_OPTION);
         System.out.println("Enter number of Paricipants");
 
+        
         int length = Integer.valueOf(players);
         /**
          * Accept number of elements input *
@@ -150,6 +143,11 @@ test*/
         
             }
             modTable.addRow(new Object[] {complete, ast});
+        
+            table.setAutoCreateRowSorter(true);
+            String Record = complete + ast;
+            //Record(Record, n);
+            
             //arr[i] = ast;
             //complete =  namess[index] + " " + arr[i];
              //Call method sort *   
@@ -173,6 +171,16 @@ JOptionPane.showMessageDialog(null, arr[i]);
         System.out.println(namess[index]);
 
     }
+    
+    
+    public void record(String Record){
+                      
+        }
+    
+    
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -214,6 +222,11 @@ JOptionPane.showMessageDialog(null, arr[i]);
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setForeground(new java.awt.Color(240, 240, 240));
         jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(600, 340, 55, 23);
 
@@ -230,20 +243,63 @@ JOptionPane.showMessageDialog(null, arr[i]);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        
+        JOptionPane.showMessageDialog(null, "Done!");
+        DefaultTableModel modTable = null;
+      
+        
+        Record(modTable);
+        /*
+        try{
+        File f;
+        f = new File("Record.txt");
+        if (!f.exists()) {
+            f.createNewFile();
+            System.out.println("Record.txt");
+        }
+        //FileWriter fs = new FileWriter(f);
+        BufferedWriter op = new BufferedWriter(new FileWriter(f, true));
+        op.write("log");
+        op.close();
+
+        f = new File("Record.txt");
+        if (!f.exists()) {
+            f.createNewFile();
+            JOptionPane.showMessageDialog(null, "Log Made");
+        }
+        JOptionPane.showMessageDialog(null, "Saved to Record.txt");
+        Writer fs = new FileWriter(f);
+        op = new BufferedWriter(new FileWriter(f, true));
+        Charset charset = StandardCharsets.UTF_8;
+        StringBuilder sb = new StringBuilder();
+           op.append("#  USER  #   REP  #");
+           op.append("\n");
+       
+           op.append("#NAME");
+           op.write("   ");
+           op.write("#REP");
+           
+        Files.write(Paths.get("Record.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
+        op.close();
+
         
         
         
+                }
+        catch (IOException ex) {
+                Logger.getLogger(RANK.class.getName()).log(Level.SEVERE, null, ex);
+                }
         
-        
-        
-        
-        
-        
-        
-        
+        */
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        PullUpsChallenge pull = new PullUpsChallenge();
+        pull.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,4 +425,69 @@ JOptionPane.showMessageDialog(null, arr[i]);
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
+
+    private void Record(DefaultTableModel modTable) {
+        
+        
+        
+        
+         try{
+        File f;
+        f = new File("Record.txt");
+        if (!f.exists()) {
+            f.createNewFile();
+            System.out.println("Record.txt");
+        }
+        //FileWriter fs = new FileWriter(f);
+        BufferedWriter op = new BufferedWriter(new FileWriter(f, true));
+        op.write("log");
+        op.close();
+
+        f = new File("Record.txt");
+        if (!f.exists()) {
+            f.createNewFile();
+            JOptionPane.showMessageDialog(null, "Log Made");
+        }
+        //JOptionPane.showMessageDialog(null, "Saved to Record.txt");
+        Writer fs = new FileWriter(f);
+        op = new BufferedWriter(new FileWriter(f, true));
+        Charset charset = StandardCharsets.UTF_8;
+        StringBuilder sb = new StringBuilder();
+           op.append("#  USER  #   REP  #");
+           op.append("\n");
+       
+           op.append("#NAME");
+           op.write("   ");
+           op.write("#REP");
+           op.write("\n");
+           PrintWriter os = new PrintWriter(f);
+       
+           os.println("");
+           for (int row = 0; row < table.getRowCount(); row++){
+               for(int col = 0; col < table.getColumnCount(); col++){
+                   os.print(table.getColumn(col));
+                   os.print(": ");
+                   os.println(table.getValueAt(row,col));
+               }
+           }
+        Files.write(Paths.get("Record.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
+        op.close();
+
+        
+        
+        
+                }
+        catch (IOException ex) {
+                Logger.getLogger(RANK.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        
+        
+        
+
+                
+        
+        
+        
+       
+    }
 }

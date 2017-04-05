@@ -51,11 +51,11 @@ public class Info extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(70, 60, 220, 190);
+        jLabel7.setBounds(40, 50, 220, 190);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/ca-logo-small-transparent-bacg (1).png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(300, 20, 410, 230);
+        jLabel8.setBounds(300, 10, 410, 230);
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setForeground(new java.awt.Color(240, 240, 240));
@@ -66,29 +66,29 @@ public class Info extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 330, 73, 23);
+        jButton1.setBounds(610, 320, 73, 23);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
         jLabel5.setText("Bodyweight");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(370, 260, 120, 22);
+        jLabel5.setBounds(340, 250, 120, 22);
 
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
         jLabel6.setText("<html>\n\n<p>This mode requires no equipment but only the user's weight as resistance.</p>\n\n\n</html>");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(370, 290, 270, 40);
+        jLabel6.setBounds(340, 280, 270, 40);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
         jLabel4.setText("Equipment");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 260, 110, 20);
+        jLabel4.setBounds(50, 250, 110, 20);
 
         jLabel2.setForeground(new java.awt.Color(240, 240, 240));
         jLabel2.setText("<html>  <p>This mode requires equipment for which the exercise that will be generated.</p>   </html>");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 290, 270, 40);
+        jLabel2.setBounds(50, 280, 270, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/Burnerbckgrnd_1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

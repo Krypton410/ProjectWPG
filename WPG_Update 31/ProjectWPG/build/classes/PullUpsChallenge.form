@@ -30,18 +30,18 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f0" green="f0" red="f0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;p&gt;Pull-ups is the second-most important calisthenics exercise after push-ups.&lt;/p&gt;&#xa;&#xa;&lt;p&gt;Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.&lt;/p&gt;&lt;p&gt; And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.&lt;/p&gt;&#xa;&#xa;&#xa;&lt;/html&gt;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;p&gt;Pull-ups is the second-most important calisthenics exercise after push-ups.&lt;/p&gt;  &lt;p&gt;Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.&lt;/p&gt;&lt;p&gt; And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.&lt;/p&gt;   &lt;/html&gt;"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="170" y="110" width="270" height="190"/>
+          <AbsoluteConstraints x="20" y="20" width="400" height="270"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jButton5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="10" style="0"/>
+          <Font name="Source Code Pro" size="10" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;p&gt;Start&lt;/p&gt; &lt;p&gt;Competition&lt;/p&gt; &lt;/html&gt; "/>
       </Properties>
@@ -50,7 +50,23 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="239" width="100" height="50"/>
+          <AbsoluteConstraints x="60" y="259" width="100" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="info1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f0" green="f0" red="f0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Click Finish to proceed."/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="305" width="250" height="20"/>
         </Constraint>
       </Constraints>
     </Component>
