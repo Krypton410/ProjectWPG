@@ -30,6 +30,7 @@ public class Info extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -44,6 +45,12 @@ public class Info extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setForeground(new java.awt.Color(240, 240, 240));
+        jButton2.setText("Incorporate");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(270, 320, 90, 23);
+
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/barbells (1).png"))); // NOI18N
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -54,6 +61,11 @@ public class Info extends javax.swing.JFrame {
         jLabel7.setBounds(40, 50, 220, 190);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/ca-logo-small-transparent-bacg (1).png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel8);
         jLabel8.setBounds(300, 10, 410, 230);
 
@@ -113,6 +125,13 @@ public class Info extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel7MouseClicked
 
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+       Burner2 burn = new Burner2();
+        burn.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -150,6 +169,7 @@ public class Info extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

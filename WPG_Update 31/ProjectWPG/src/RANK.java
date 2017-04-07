@@ -22,6 +22,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.TableColumn;
 import javax.swing.DefaultRowSorter;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -63,6 +64,7 @@ public class RANK extends javax.swing.JFrame {
         table.setModel(modTable);
         DefaultTableModel modTable1 = null;
         DefaultTableModel = modTable1;
+        modTable.addColumn("Users");
         modTable.addColumn("User");
         modTable.addColumn("Reps");
         table.setEnabled(false);
@@ -142,9 +144,12 @@ test*/
             arr[i] = Integer.valueOf(concat);
         
             }
-            modTable.addRow(new Object[] {complete, ast});
+            modTable.addRow(new Object[] {i+1,complete, ast});
         
             table.setAutoCreateRowSorter(true);
+            table.getRowSorter().toggleSortOrder(2);
+            table.getRowSorter().toggleSortOrder(0);
+            
             String Record = complete + ast;
             //Record(Record, n);
             
@@ -154,8 +159,10 @@ test*/
         }
         for (int a : arr) {   
             sort(arr);
+            table.getRowSorter().toggleSortOrder(2);
         }    
-         //  Display
+        //table.getRowSorter().toggleSortOrder(0);
+//  Display
         System.out.println("Sorted ");
 
         for (i = 0; i < n; i++) {
@@ -453,23 +460,31 @@ JOptionPane.showMessageDialog(null, arr[i]);
         op = new BufferedWriter(new FileWriter(f, true));
         Charset charset = StandardCharsets.UTF_8;
         StringBuilder sb = new StringBuilder();
-           op.append("#  USER  #   REP  #");
-           op.append("\n");
-       
-           op.append("#NAME");
-           op.write("   ");
-           op.write("#REP");
-           op.write("\n");
+        /*           op.append("#  USER  #   REP  #");
+        op.append("\n");
+        
+        op.append("#NAME");
+        op.write("   ");
+        op.write("#REP");
+        op.write("\n");*/
+        for(int i = 0; i < table.getRowCount(); i++){
+        for(int j = 0; j < table.getColumnCount(); j++){
+            op.append(table.getModel().getValueAt(i,j) + "          " );
+        }
+            op.append("\n ----------------------\n");
+        }
            PrintWriter os = new PrintWriter(f);
-       
-           os.println("");
+        
+           /*           os.println("");
            for (int row = 0; row < table.getRowCount(); row++){
-               for(int col = 0; col < table.getColumnCount(); col++){
-                   os.print(table.getColumn(col));
-                   os.print(": ");
-                   os.println(table.getValueAt(row,col));
-               }
+           for(int col = 0; col < table.getColumnCount(); col++){
+           os.print(table.getColumn(col));
+           os.print(": ");
+           os.println(table.getValueAt(row,col));
            }
+           }
+           */
+           
         Files.write(Paths.get("Record.txt"), sb.toString().getBytes(), StandardOpenOption.APPEND);
         op.close();
 

@@ -98,6 +98,10 @@ public class Ranking extends javax.swing.JFrame {
                   
     }
 
+    void postTime1(int rep, String time, String name) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
  
     
      //JList list = new JList(puc.names);

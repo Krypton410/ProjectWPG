@@ -347,7 +347,7 @@ public class PushUpChallenge extends javax.swing.JFrame {
         // TODO add your handling code here:
              myMain begin = new myMain();
   Challenge challenge = new Challenge();
-              
+              int check = 0;
         String getRep = repinput.getText();
         challenge.postRep1((getRep));
         String getTime = w.getText();
@@ -357,7 +357,10 @@ public class PushUpChallenge extends javax.swing.JFrame {
                  String test = "";
                
           if (getRep.equals(test) && getTime.equals(test))
-               JOptionPane.showMessageDialog(null, "Null values was recorded");
+              JOptionPane.showMessageDialog(null, "Null Values Recorded");
+  
+              
+          
 
           challenge.postData1(uname);
           

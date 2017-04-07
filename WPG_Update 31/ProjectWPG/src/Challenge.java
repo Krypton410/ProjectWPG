@@ -165,6 +165,7 @@ public class Challenge extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(10, 180, 60, 14);
 
+        jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setFont(new java.awt.Font("Dotum", 0, 12)); // NOI18N
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +176,7 @@ public class Challenge extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(40, 303, 70, 30);
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton1.setText("Push ups Challenge");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -185,8 +187,14 @@ public class Challenge extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(190, 110, 160, 23);
 
+        jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jButton2.setText("Planks");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -195,6 +203,7 @@ public class Challenge extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(190, 190, 160, 23);
 
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         jButton3.setText("Pull Ups Challenge");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -205,6 +214,7 @@ public class Challenge extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(190, 150, 160, 23);
 
+        jButton5.setBackground(new java.awt.Color(255, 0, 0));
         jButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
         jButton5.setText("Rankings");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -313,8 +323,24 @@ public class Challenge extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "This Challenge is still under development");
+        //JOptionPane.showMessageDialog(null, "This Challenge is still under development");
+        /*       Planks planks = new Planks();
+        planks.setVisible(true);
+        this.setVisible(false);*/
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        Planks planks = new Planks();
+        
+        int check  = JOptionPane.showConfirmDialog(this, "This Part is not working properly. Continue?");
+        if(check== JOptionPane.YES_OPTION){
+              planks.setVisible(true);      
+              this.setVisible(false);
+
+        }
+        
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments

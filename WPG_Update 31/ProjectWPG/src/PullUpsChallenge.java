@@ -292,9 +292,11 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
         jLabel4.setText("<html> <p>Pull-ups is the second-most important calisthenics exercise after push-ups.</p>  <p>Pulling your entire body weight against gravity really does take a long of strength and multiple muscle groups.</p><p> And just like push-ups, you can change up your pull-up variation very easily with different grips, arm width, and movements.</p>   </html>");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 20, 400, 270);
+        jLabel4.setBounds(20, 20, 430, 280);
 
+        jButton5.setBackground(new java.awt.Color(51, 51, 51));
         jButton5.setFont(new java.awt.Font("Source Code Pro", 0, 10)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(240, 240, 240));
         jButton5.setText("<html> <p>Start</p> <p>Competition</p> </html> ");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,6 +312,8 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(info1);
         info1.setBounds(60, 305, 250, 20);
 
+        jButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4.setForeground(new java.awt.Color(240, 240, 240));
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,6 +338,8 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(520, 320, 140, 14);
 
+        fin.setBackground(new java.awt.Color(51, 51, 51));
+        fin.setForeground(new java.awt.Color(240, 240, 240));
         fin.setText("FINISH");
         fin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,7 +349,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(fin);
         fin.setBounds(180, 330, 100, 23);
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setBackground(new java.awt.Color(51, 51, 51));
         jButton3.setFont(new java.awt.Font("GulimChe", 0, 12)); // NOI18N
         jButton3.setForeground(new java.awt.Color(240, 240, 240));
         jButton3.setText("START");
@@ -355,6 +361,8 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(290, 170, 110, 50);
 
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setForeground(new java.awt.Color(240, 240, 240));
         jButton2.setText("Reset Time");
         jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -382,6 +390,8 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(block);
         block.setBounds(460, 20, 210, 70);
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setForeground(new java.awt.Color(240, 240, 240));
         jButton1.setText("Start Timer");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

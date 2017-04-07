@@ -15,9 +15,90 @@ public class Burner1 extends javax.swing.JFrame {
      */
     public Burner1() {
         initComponents();
-         setTitle("Burner Beginner");
+         setTitle("Burner Equipment");
            setResizable(false);
         setSize(726, 400);
+        
+    
+        this.setVisible(false);
+        int q = 0;
+        String[] eburner = new String[30];
+        eburner[0] = "Shoulder Press";
+        eburner[1] = "Goblet Squats";
+        eburner[2] = "Walking Dumbell Lunges";
+        eburner[3] = "Hammer Curl";
+        eburner[4] = "Wall Sit";
+        eburner[5] = "Alt. Shoulder Front Raise";
+        eburner[6] = "Dumbell Push Ups to Tricep Kickback";
+        eburner[7] = "Alt. Lunges With DB LR";
+        eburner[8] = "BB Snatch";
+        eburner[9] = "Dumbell Snatch";
+        eburner[10] = "DB Skier Swing";
+        eburner[11] = "DB Farmer's Walk";
+        eburner[12] = "Box Squat Jumps";
+        eburner[13] = "Battle Rope Wave";
+        eburner[14] = "Box Thrusters";
+        eburner[15] = "Fitness Ball Crunches";
+        eburner[16] = "DB SL Lateral Raise";
+        eburner[17] = "Bench Dips";
+        eburner[18] = "Alt Chest Press";
+        eburner[19] = "One Arm SL Press";
+        eburner[20] = "Lying triceps ext";
+        eburner[21] = "Dumbell Squats";
+        eburner[22] = "Bulgarian Split Squats ";
+        eburner[23] = "Kettle-Bell Swings";
+        eburner[24] = "Turkish Get-Up";
+        eburner[25] = "DB Swings"; 
+        eburner[26] = "Arm Pull-Over Straight leg crunch";
+        eburner[27] = "Weighted Planks";
+        eburner[28] = "Weighted Sit Ups";
+        eburner[29] = "Explosive Jump w/ DB";
+        
+                
+        
+        
+        
+      
+         
+         for(int i =0; i<12; i++)
+         {
+          
+             int q1 = (int) (Math.random()*30);
+             int q2 = (int) (Math.random()*30);
+             int q3 = (int) (Math.random()*30);
+             int q4 = (int) (Math.random()*30);
+             int q5 = (int) (Math.random()*30);
+             int q6 = (int) (Math.random()*30);
+             int q7 = (int) (Math.random()*30);
+             int q8 = (int) (Math.random()*30);
+             int q9 = (int) (Math.random()*30);
+             int q10 = (int) (Math.random()*30);
+             int q11 = (int) (Math.random()*30);
+             int q12 = (int) (Math.random()*30);
+             
+             
+          
+         
+       
+    
+         
+        
+        
+         c1.setText(eburner[q1]);
+         c2.setText(eburner[q2]);
+         c3.setText(eburner[q3]);
+         c4.setText(eburner[q4]);
+         c5.setText(eburner[q5]);
+         c6.setText(eburner[q6]);
+         c7.setText(eburner[q7]);
+         c8.setText(eburner[q8]);
+         c9.setText(eburner[q9]);
+         c10.setText(eburner[q10]);
+         c11.setText(eburner[q11]);
+         c12.setText(eburner[q12]);
+         
+         }  
+          
     }
 
     /**
@@ -29,11 +110,111 @@ public class Burner1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        c9 = new javax.swing.JLabel();
+        c10 = new javax.swing.JLabel();
+        c11 = new javax.swing.JLabel();
+        c12 = new javax.swing.JLabel();
+        c5 = new javax.swing.JLabel();
+        c6 = new javax.swing.JLabel();
+        c7 = new javax.swing.JLabel();
+        c8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        c4 = new javax.swing.JLabel();
+        c3 = new javax.swing.JLabel();
+        c2 = new javax.swing.JLabel();
+        c1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        c9.setForeground(new java.awt.Color(240, 240, 240));
+        c9.setText("jLabel4");
+        getContentPane().add(c9);
+        c9.setBounds(370, 150, 170, 14);
+
+        c10.setForeground(new java.awt.Color(240, 240, 240));
+        c10.setText("jLabel5");
+        getContentPane().add(c10);
+        c10.setBounds(370, 180, 190, 14);
+
+        c11.setForeground(new java.awt.Color(240, 240, 240));
+        c11.setText("jLabel5");
+        getContentPane().add(c11);
+        c11.setBounds(370, 210, 160, 14);
+
+        c12.setForeground(new java.awt.Color(240, 240, 240));
+        c12.setText("jLabel5");
+        getContentPane().add(c12);
+        c12.setBounds(370, 240, 200, 14);
+
+        c5.setForeground(new java.awt.Color(240, 240, 240));
+        c5.setText("jLabel4");
+        getContentPane().add(c5);
+        c5.setBounds(190, 150, 160, 14);
+
+        c6.setForeground(new java.awt.Color(240, 240, 240));
+        c6.setText("jLabel5");
+        getContentPane().add(c6);
+        c6.setBounds(190, 180, 160, 14);
+
+        c7.setForeground(new java.awt.Color(240, 240, 240));
+        c7.setText("jLabel5");
+        getContentPane().add(c7);
+        c7.setBounds(190, 210, 170, 14);
+
+        c8.setForeground(new java.awt.Color(240, 240, 240));
+        c8.setText("jLabel5");
+        getContentPane().add(c8);
+        c8.setBounds(190, 240, 170, 14);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel9.setText("Cycle 3");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(370, 110, 100, 17);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel8.setText("Cycle 2");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(190, 110, 100, 17);
+
+        c4.setForeground(new java.awt.Color(240, 240, 240));
+        c4.setText("jLabel5");
+        getContentPane().add(c4);
+        c4.setBounds(30, 240, 160, 14);
+
+        c3.setForeground(new java.awt.Color(240, 240, 240));
+        c3.setText("jLabel5");
+        getContentPane().add(c3);
+        c3.setBounds(30, 210, 160, 14);
+
+        c2.setForeground(new java.awt.Color(240, 240, 240));
+        c2.setText("jLabel5");
+        getContentPane().add(c2);
+        c2.setBounds(30, 180, 160, 14);
+
+        c1.setForeground(new java.awt.Color(240, 240, 240));
+        c1.setText("jLabel4");
+        getContentPane().add(c1);
+        c1.setBounds(30, 150, 160, 14);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel3.setText("Cycle 1");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(30, 110, 100, 17);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel2.setText("Equipment Mode");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 20, 220, 60);
 
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -44,18 +225,21 @@ public class Burner1 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(590, 330, 73, 23);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/Burnerbckgrnd_1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-10, 0, 740, 400);
+        jLabel1.setBounds(0, 0, 750, 400);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            Choice2 choice = new Choice2();
+            choice.setVisible(true);
+            this.setVisible(false);
         // TODO add your handling code here:
-        Choice2 choice = new Choice2();
-        choice.setVisible(true);
-        this.setVisible(false);
+       
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -94,7 +278,23 @@ public class Burner1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel c1;
+    private javax.swing.JLabel c10;
+    private javax.swing.JLabel c11;
+    private javax.swing.JLabel c12;
+    private javax.swing.JLabel c2;
+    private javax.swing.JLabel c3;
+    private javax.swing.JLabel c4;
+    private javax.swing.JLabel c5;
+    private javax.swing.JLabel c6;
+    private javax.swing.JLabel c7;
+    private javax.swing.JLabel c8;
+    private javax.swing.JLabel c9;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

@@ -41,6 +41,7 @@ public class Choice2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jButton5.setBackground(new java.awt.Color(0, 153, 204));
         jButton5.setText("Info");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,7 +49,7 @@ public class Choice2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(200, 320, 100, 23);
+        jButton5.setBounds(200, 320, 100, 20);
 
         jLabel3.setFont(new java.awt.Font("Tunga", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
@@ -56,6 +57,7 @@ public class Choice2 extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(200, 100, 180, 30);
 
+        jButton4.setBackground(new java.awt.Color(0, 153, 255));
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +67,7 @@ public class Choice2 extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(70, 320, 55, 20);
 
+        jButton1.setBackground(new java.awt.Color(0, 153, 204));
         jButton1.setText("Equipment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +77,13 @@ public class Choice2 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(200, 150, 105, 23);
 
+        jButton3.setBackground(new java.awt.Color(0, 153, 204));
         jButton3.setText("Bodyweight");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(200, 190, 105, 23);
 
@@ -108,6 +117,13 @@ public class Choice2 extends javax.swing.JFrame {
         info.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Burner2 burner = new Burner2();
+        burner.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
