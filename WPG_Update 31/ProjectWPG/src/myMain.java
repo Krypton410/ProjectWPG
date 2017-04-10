@@ -117,7 +117,7 @@ public class myMain extends javax.swing.JFrame {
         warn.setFont(new java.awt.Font("MS UI Gothic", 0, 12)); // NOI18N
         warn.setForeground(new java.awt.Color(255, 0, 0));
         getContentPane().add(warn);
-        warn.setBounds(260, 80, 190, 0);
+        warn.setBounds(460, 60, 190, 10);
 
         maintextbox.setBackground(new java.awt.Color(51, 51, 51));
         maintextbox.setForeground(new java.awt.Color(240, 240, 240));

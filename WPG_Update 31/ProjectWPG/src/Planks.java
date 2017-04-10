@@ -109,12 +109,12 @@ public class Planks extends javax.swing.JFrame {
         save.setBounds(100, 330, 80, 24);
 
         block.setAlignment(java.awt.Label.CENTER);
-        block.setBackground(new java.awt.Color(204, 102, 0));
+        block.setBackground(new java.awt.Color(153, 102, 0));
         block.setFont(new java.awt.Font("Lucida Console", 0, 48)); // NOI18N
         block.setForeground(new java.awt.Color(240, 240, 240));
         block.setText("0");
         getContentPane().add(block);
-        block.setBounds(470, 10, 240, 110);
+        block.setBounds(460, 10, 240, 110);
 
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("USER");
@@ -139,18 +139,18 @@ public class Planks extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(20, 190, 190, 50);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/pushups (1).gif"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/test/plank (3).jpg"))); // NOI18N
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(470, 120, 240, 120);
+        jLabel5.setBounds(460, 90, 240, 200);
 
         time.setAlignment(java.awt.Label.CENTER);
-        time.setBackground(new java.awt.Color(204, 102, 0));
+        time.setBackground(new java.awt.Color(153, 102, 0));
         time.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         time.setFont(new java.awt.Font("Lucida Console", 0, 50)); // NOI18N
         time.setForeground(new java.awt.Color(240, 240, 240));
         time.setText("0");
         getContentPane().add(time);
-        time.setBounds(470, 10, 240, 110);
+        time.setBounds(460, 10, 240, 110);
 
         btn.setBackground(new java.awt.Color(153, 102, 0));
         btn.setForeground(new java.awt.Color(240, 240, 240));

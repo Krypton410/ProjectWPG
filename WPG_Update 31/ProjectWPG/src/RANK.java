@@ -144,10 +144,11 @@ test*/
             arr[i] = Integer.valueOf(concat);
         
             }
+            
             modTable.addRow(new Object[] {i+1,complete, ast});
-        
+            
             table.setAutoCreateRowSorter(true);
-            table.getRowSorter().toggleSortOrder(2);
+           table.getRowSorter().toggleSortOrder(2);
             table.getRowSorter().toggleSortOrder(0);
             
             String Record = complete + ast;
@@ -159,7 +160,7 @@ test*/
         }
         for (int a : arr) {   
             sort(arr);
-            table.getRowSorter().toggleSortOrder(2);
+            table.getRowSorter().toggleSortOrder(2);//2
         }    
         //table.getRowSorter().toggleSortOrder(0);
 //  Display
@@ -242,7 +243,12 @@ JOptionPane.showMessageDialog(null, arr[i]);
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(180, 60, 380, 270);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dark bckgrnd.jpg"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 730, 400);
 
@@ -307,6 +313,10 @@ JOptionPane.showMessageDialog(null, arr[i]);
         pull.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -379,11 +389,11 @@ JOptionPane.showMessageDialog(null, arr[i]);
         }
          //Sorting lower half 
         if (low < j) {
-            quickSort(arr, low, j);
+            quickSort(arr, j, low);
         }
          // Sorting upper half 
         if (i < high) {
-            quickSort(arr, high, i);
+            quickSort(arr, i, high);
         }
     }
 

@@ -271,7 +271,7 @@ public class Challenge extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        JOptionPane.showMessageDialog(null, "This part is still being constructed");
+        JOptionPane.showMessageDialog(null, "This part is moved to another location");
         // TODO add your handling code here:
 /*
         Ranking ranking = new Ranking();

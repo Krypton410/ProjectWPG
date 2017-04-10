@@ -312,7 +312,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(info1);
         info1.setBounds(60, 305, 250, 20);
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4.setBackground(new java.awt.Color(0, 102, 102));
         jButton4.setForeground(new java.awt.Color(240, 240, 240));
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -412,7 +412,7 @@ public class PullUpsChallenge extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 10, 350, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dark bckgrnd.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-6, 0, 730, 400);
 

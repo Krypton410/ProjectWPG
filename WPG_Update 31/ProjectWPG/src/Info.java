@@ -48,6 +48,11 @@ public class Info extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setForeground(new java.awt.Color(240, 240, 240));
         jButton2.setText("Incorporate");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(270, 320, 90, 23);
 
@@ -131,6 +136,13 @@ public class Info extends javax.swing.JFrame {
         burn.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Incorporate corp = new Incorporate();
+        corp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

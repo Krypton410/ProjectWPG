@@ -33,6 +33,7 @@ public class Choice2 extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -66,6 +67,16 @@ public class Choice2 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4);
         jButton4.setBounds(70, 320, 55, 20);
+
+        jButton6.setBackground(new java.awt.Color(0, 153, 204));
+        jButton6.setText("Incorporate");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6);
+        jButton6.setBounds(200, 230, 105, 23);
 
         jButton1.setBackground(new java.awt.Color(0, 153, 204));
         jButton1.setText("Equipment");
@@ -125,6 +136,13 @@ public class Choice2 extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Incorporate corp = new Incorporate();
+        corp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -165,6 +183,7 @@ public class Choice2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
